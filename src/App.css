@@ -1,0 +1,56 @@
+.App {
+  text-align: center;
+  font-size: 12px;
+}
+
+body{
+  background-image: url('../src/img/basketball-player.jpg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
+
+}
+
+.App-header {
+  background-color: #3d435b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+
+.table-container {
+  width: 50%;
+  padding: 50px;
+  font-size: 14px;
+  /* background-color: #ffffff; */
+}
+
+.teamDetails {
+  padding: 50px;
+  margin-top: 92px;
+  height: 250px;
+  padding-left: 250px;
+  width: 200px;
+}
+
+.btn-fav {
+  float: right;
+}
+
+.details {
+  text-align: left;
+  float: left;
+}
+
+.table {
+}
