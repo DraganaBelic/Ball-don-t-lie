@@ -1,4 +1,4 @@
-import { GET_ALL_PLAYERS, GET_ALL_TEAMS, GET_TEAM_BY_ID, SET_TEAM_AS_FAVOURITE, GET_GAMES_FOR_TEAM_AND_SEASON } from "../constants/action";
+import { GET_ALL_PLAYERS, GET_ALL_TEAMS, GET_TEAM_BY_ID, SET_TEAM_AS_FAVOURITE, GET_GAMES_FOR_TEAM_AND_SEASON, GET_GAMES_FOR_TEAM_AND_DATES } from "../constants/action";
 
 
 export function getAllTeams() {
@@ -27,6 +27,12 @@ export function setTeamAsFavourite(favourite) {
 export function getGamesForTeamAndSeason(props) {
     return{
         type: GET_GAMES_FOR_TEAM_AND_SEASON,
+        props
+    }
+}
+export function getGamesForTeamAndDates(props) {
+    return{
+        type: GET_GAMES_FOR_TEAM_AND_DATES,
         props
     }
 }

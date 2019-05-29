@@ -52,5 +52,19 @@ body{
   float: left;
 }
 
-.table {
+.gamesTable th, td {
+  width: 15%;
+}
+
+body .fav_team {
+  background-color: #ffffffb8;
+  height: 1000px;
+}
+
+.btn-primary {
+  margin: 10px;
+}
+
+.favourite_team {
+  float: right;
 }

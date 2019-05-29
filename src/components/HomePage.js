@@ -28,7 +28,6 @@ class HomePage extends Component {
             ...this.state,
             pickedTeam: id
         })
-
     }
 
     setAsFavourite = () => {
@@ -97,7 +96,6 @@ class HomePage extends Component {
     }
 }
 const select = state => {
-    console.log("TEAMS STATE", state);
     return {
         teams: getValueAppPropertyStore(state, 'teams'),
     }

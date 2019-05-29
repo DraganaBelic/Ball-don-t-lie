@@ -12,12 +12,11 @@ export function* getAllTeams(action) {
         }
         yield put(addEditGlobalPropToStore(teams))
     } catch(e) {
-        console.log("getAllTeams error: ", e);
+        console.log(" error: ", e);
     }
 }
 
 export function* getAllPlayers(action) {
-    console.log("SAGA");
     try {
         let response = yield call(BallDontLie.getAllPlayers);
         const players = {
@@ -26,22 +25,32 @@ export function* getAllPlayers(action) {
         }
         yield put(addEditGlobalPropToStore(players))
     } catch(e) {
-        console.log("getAllPlayers error: ", e);
+        console.log(" error: ", e);
     }
 }
 
 export function* getGamesForTeamAndSeason(action) {
-    console.log("ACTION getGamesForTeamAndSeason", action.props);
     try {
         let response = yield call(BallDontLie.getGamesForTeamAndSeason, action.props.season, action.props.team);
-        console.log("GAMES RESPONSE", response.data);
         const games = {
             key: "games",
             value: response.data
         }
         yield put(addEditGlobalPropToStore(games))
     } catch(e) {
-        console.log("getAllPlayers error: ", e);
+        console.log(" error: ", e);
+    }
+}
+export function* getGamesForTeamAndDates(action) {
+    try {
+        let response = yield call(BallDontLie.getGamesForTeamAndDates, action.props.start_date, action.props.end_date, action.props.team);
+        const games = {
+            key: "games",
+            value: response.data
+        }
+        yield put(addEditGlobalPropToStore(games))
+    } catch(e) {
+        console.log(" error: ", e);
     }
 }
 

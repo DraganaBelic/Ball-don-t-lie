@@ -15,11 +15,7 @@ export default class Header extends Component {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <NavDropdown title="See favourite" id="basic-nav-dropdown">
-              {/* <NavDropdown.Item href={routes.FAVOURITE_TEAM}>Team</NavDropdown.Item> */}
               <Link to={routes.FAVOURITE_TEAM}>Favourite team</Link>
-              <NavDropdown.Divider />
-              {/* <NavDropdown.Item href={routes.FAVOURITE_PLAYERS}>Player</NavDropdown.Item> */}
-              <Link to={routes.FAVOURITE_TEAM}>Favourite players</Link>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

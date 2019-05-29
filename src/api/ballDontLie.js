@@ -68,6 +68,22 @@ export class BallDontLie {
                 throw error;
             });
     }
+
+    static getGamesForTeamAndDates(start_date, end_date, team) {
+        let request = {
+            ...DEFAULT_REST_PARAMS_GET
+        }
+        let restEndpoint = "https://www.balldontlie.io/api/v1/games/?start_date[]="+start_date+"&end_date[]="+end_date+"&team_ids[]="+team;
+
+        return fetch(restEndpoint, request
+            ).then(
+                (response) => response.json()
+            ).then((responseJson) => {
+                return responseJson;
+            }).catch((error) => {
+                throw error;
+            });
+    }
 }
 
 
