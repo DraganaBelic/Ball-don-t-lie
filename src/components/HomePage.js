@@ -22,8 +22,6 @@ class HomePage extends Component {
 
     }
     onRowSelect(id, isSelected) {
-        console.log("id", id);
-        // this.props.dispatch(getTeamById(id));
         this.setState({
             ...this.state,
             pickedTeam: id
